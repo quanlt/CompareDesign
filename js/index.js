@@ -14,5 +14,6 @@ $("#designer_file").change(function(){
 })
 
 $("#opacityRange").on("input", function(){
-  $("#image_2").fadeTo(0, this.value/100);
+  console.log("input " + this.value);
+  $("#image_1").fadeTo(0, this.value/100);
 })
