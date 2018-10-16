@@ -1,0 +1,30 @@
+
+.column {
+  width: 50%;
+  float: left;
+}
+#preview {
+  position: relative; left: 0; top: 0;
+}
+
+#preview, #preview img {
+  max-width: 720px;
+  max-height: 1280px;
+}
+
+#opacityRange{
+  max-width: 235px;
+  height: 15px;
+}
+
+.actual{ 
+  max-width: 100%; 
+  z-index: 101;
+}
+
+.expected{
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: 100;
+}

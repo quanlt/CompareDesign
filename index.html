@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Picture compare</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media="screen,projection">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cocoen.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+
+      <div class="col s6">
+        <div class="section">
+          <h5> Select the photo files (up to 2 files)</h5>
+          <input type="file" id="designer_file" multiple>
+        </div>
+
+        <div class="divider"></div>
+        <div class="section">
+          <h5> Select the comparison mode</h5>
+          <a id="overlay" class="waves-effect waves-light btn-small "><i class="material-icons left">brightness_medium</i>Overlay</a>
+          <a id="split" class="waves-effect waves-light btn-small disabled"><i class="material-icons right">graphic_eq</i>Split</a>
+          <p class="range-field">
+          <input disabled type="range" min="1" max="100" value="50" class="slider" id="opacityRange">
+          <label class="active" for="width" id="opacity">50%</label>
+          </p>
+        </div>
+        <div class="divider"></div>
+        <div class="section">
+          <h5> Image override</h5>
+          <p>
+              <label>
+                <input type="checkbox" id="overwriteDimenion" />
+                <span>Overwrite the dimension</span>
+              </label>
+            </p>
+          <div class="row">
+              <div class="input-field col s6">
+                <input value="320" id="width" type="number" class="validate">
+                <label class="active" for="width">Width</label>
+              </div>
+              <div class="input-field col s6">
+                  <input  value="640" id="height" type="number" class="validate">
+                  <label class="active" for="height">Height</label>
+                </div>
+            </div>
+            <button class="btn waves-effect waves-light disabled" id="submitSize" type="submit" name="action">Submit
+                <i class="material-icons right">done</i>
+              </button>            
+
+        </div>
+      </div>
+      <div class="col s6">
+          <div id="preview" class="cocoen">
+            <img id="image_1"/>
+            <img id="image_2"/>
+          </div>
+        </div>
+    </div>
+    
+  </div>
+  
+
+  <script src="js/cocoen-jquery.min.js"></script>
+  <script src="js/cocoen.min.js"></script>
+  <script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
+  <script src="js/index.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Cocoen();
+    });
+  </script>
+</body>
+
+</html>
