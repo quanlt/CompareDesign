@@ -28,3 +28,16 @@
   left: 0;
   z-index: 100;
 }
+.ribbon {
+  position: absolute;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  font-weight: 700;
+  color: #fff;
+  top: 10px;
+  background: #ffb800;
+}
+
+.ribbon.implementation{
+  right: 20px;
+}
