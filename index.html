@@ -13,13 +13,13 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container" style="margin-top:100px">
     <div class="row">
 
       <div class="col s6">
         <div class="section">
           <h5> Select the photo files (up to 2 files)</h5>
-          <input type="file" id="designer_file" multiple>
+          <input type="file" id="designer_file" accept="image/*" multiple>
         </div>
 
         <div class="divider"></div>
@@ -47,7 +47,7 @@
                 <label class="active" for="width">Width</label>
               </div>
               <div class="input-field col s6">
-                  <input  value="480" id="height" type="number" class="validate">
+                  <input  value="568" id="height" type="number" class="validate">
                   <label class="active" for="height">Height</label>
                 </div>
             </div>
@@ -56,8 +56,14 @@
               </button>            
 
         </div>
+        <div class="divider"></div>
+        <div class="section">
+          <h5> Export</h5>
+          <a id="export" class="waves-effect waves-light btn-small "><i class="material-icons left">file_download</i>Download</a>
+          <img id="img_out"/>
+        </div>
       </div>
-      <div class="col s6">
+      <div class="col s6" style="position: relative">
           <div id="preview" class="cocoen">
             <img id="image_1"/>
             <img id="image_2"/>
@@ -70,6 +76,7 @@
 
   <script src="js/cocoen-jquery.min.js"></script>
   <script src="js/cocoen.min.js"></script>
+  <script src="js/html2canvas.js"></script>
   <script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
   <script src="js/index.js"></script>
   <script>
