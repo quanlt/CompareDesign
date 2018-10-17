@@ -28,6 +28,7 @@ function toggleCompareMode(){
   $(".cocoen-drag").toggle();
   if($("#overlay").hasClass("disabled")){
     $("#image_2").fadeTo(0, $("#opacityRange").val()/100);
+    $("#image_1").css({'width':'', 'height': ''});
   } else {
     $("#image_2").fadeTo(0, 1);
   }
