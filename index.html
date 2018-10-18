@@ -28,58 +28,78 @@
           <a id="overlay" class="waves-effect waves-light btn-small "><i class="material-icons left">brightness_medium</i>Overlay</a>
           <a id="split" class="waves-effect waves-light btn-small disabled"><i class="material-icons right">graphic_eq</i>Split</a>
           <p class="range-field">
-          <input disabled type="range" min="1" max="100" value="50" class="slider" id="opacityRange">
-          <label class="active" for="width" id="opacity">50%</label>
+            <input disabled type="range" min="1" max="100" value="50" class="slider" id="opacityRange">
+            <label class="active" for="width" id="opacity">50%</label>
           </p>
         </div>
         <div class="divider"></div>
         <div class="section">
           <h5> Image override</h5>
           <p>
-              <label>
-                <input type="checkbox" id="overwriteDimenion" />
-                <span>Overwrite the dimension</span>
-              </label>
-            </p>
+            <label>
+              <input type="checkbox" id="overwriteDimenion" />
+              <span>Overwrite the dimension</span>
+            </label>
+          </p>
           <div class="row">
-              <div class="input-field col s6">
-                <input value="320" id="width" type="number" class="validate">
-                <label class="active" for="width">Width</label>
-              </div>
-              <div class="input-field col s6">
-                  <input  value="568" id="height" type="number" class="validate">
-                  <label class="active" for="height">Height</label>
-                </div>
+            <div class="input-field col s6">
+              <input value="320" id="width" type="number" class="validate">
+              <label class="active" for="width">Width</label>
             </div>
-            <button class="btn waves-effect waves-light disabled" id="submitSize" type="submit" name="action">Submit
-                <i class="material-icons right">done</i>
-              </button>            
+            <div class="input-field col s6">
+              <input value="568" id="height" type="number" class="validate">
+              <label class="active" for="height">Height</label>
+            </div>
+          </div>
+          <button class="btn waves-effect waves-light disabled" id="submitSize" type="submit" name="action">Submit
+            <i class="material-icons right">done</i>
+          </button>
 
         </div>
         <div class="divider"></div>
         <div class="section">
           <h5> Export</h5>
-          <a id="export" class="waves-effect waves-light btn-small "><i class="material-icons left">file_download</i>Download</a>
-          <img id="img_out"/>
+          <div class="row">
+            <div class="input-field col s6">
+              <input value="#000000" id="descriptionColor" style="margin-top:10px" type="color" class="validate">
+              <label class="active" for="descriptionColor">Description color</label>
+            </div>
+            <div class="input-field col s6">
+              <input value="18" id="textSize" type="number" class="validate">
+              <label class="active" for="textSize"></label>
+            </div>
         </div>
+        <a id="export" class="waves-effect waves-light btn-small "><i class="material-icons left">file_download</i>Download</a>
+      </div>
       </div>
       <div class="col s6" style="position: relative">
-          <div id="preview" class="cocoen">
-            <img id="image_1"/>
-            <img id="image_2"/>
-          </div>
-          <div class="ribbon">Design</div>
-          <div class="ribbon implementation">Implementation</div>
+        <div id="preview" class="cocoen ui-widget-content">
+          <img id="image_1" />
+          <img id="image_2" />
         </div>
+        <div id="commentPopup" style="display: none">
+          <div id="commentArea">
+            <div id="commentWrapper">
+              <input placeholder="Type something" maxlength="1024" id="commentNote"/>
+            </div>
+            <a class="waves-effect waves-light btn-small" style="margin-left: 10px;" id="commentSendButton">Send</a>
+            <a class="waves-effect waves-light btn-small" style="margin-left: 10px;" id="deleteButton">Delete</a>
+          </div>
+        </div>
+        <!-- <div class="dot">
+        </div> -->
+        <!-- <div class="ribbon">Design</div>
+        <div class="ribbon implementation">Implementation</div> -->
+      </div>
     </div>
-    
+
   </div>
-  
+
 
   <script src="js/cocoen-jquery.min.js"></script>
   <script src="js/cocoen.min.js"></script>
   <script src="js/html2canvas.js"></script>
-  <script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
+  <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
   <script src="js/index.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
