@@ -12,7 +12,7 @@ $("#designer_file").change(function () {
   renderImage(this.files[0], $("#image_1"));
   renderImage(this.files[1], $("#image_2"));
   console.log("file was selected");
-
+  noteNumber = 0;
 })
 
 $("#opacityRange").on("input", function () {
