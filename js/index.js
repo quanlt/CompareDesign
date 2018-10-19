@@ -145,23 +145,17 @@ function trimCanvas(c, text) {
 
 
 $("#export").click(function () {
-  // $("#commentPopup").hide();
-  // var note = "";
-  // $("span.dot").each(function () {
-  //   note = note + $(this).html() + ". " + $(this).attr("alt") + "\n";
-  // })
-  // html2canvas($("#preview"), {
-  //   onrendered: function (canvas) {
-  //     var trimmed = trimCanvas(canvas, note.toString());
-  //     createDownloadUri(trimmed.toDataURL(), "compare_design.png");
-  //   }
-  // });
-  html2canvas(document.body, {
+  $("#commentPopup").hide();
+  var note = "";
+  $("span.dot").each(function () {
+    note = note + $(this).html() + ". " + $(this).attr("alt") + "\n";
+  })
+  html2canvas($("#preview"), {
     onrendered: function (canvas) {
-      document.body.appendChild(canvas);
+      var trimmed = trimCanvas(canvas, note.toString());
+      createDownloadUri(trimmed.toDataURL(), "compare_design.png");
     }
-});
-
+  });
 });
 
 $("#preview").mousedown(function (event) {
